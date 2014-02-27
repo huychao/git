@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF769396-661E-448D-9C37-F385C14388B5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>QLBH.My.MyApplication</StartupObject>
+    <RootNamespace>QLBH</RootNamespace>
+    <AssemblyName>QLBH</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>QLBH.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>QLBH.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BUS\BoPhan_BUS.vb" />
+    <Compile Include="BUS\CuaHang_BUS.vb" />
+    <Compile Include="BUS\HoaDon_BUS.vb" />
+    <Compile Include="BUS\KhachHang_BUS.vb" />
+    <Compile Include="BUS\KhuVuc_BUS.vb" />
+    <Compile Include="BUS\KhuyenMai_BUS.vb" />
+    <Compile Include="BUS\NhanVien_BUS.vb" />
+    <Compile Include="BUS\NhaPhanPhoi_BUS.vb" />
+    <Compile Include="BUS\SanPhamDaBan_BUS.vb" />
+    <Compile Include="DAO\BoPhan_DAO.vb" />
+    <Compile Include="DAO\CuaHang_DAO.vb" />
+    <Compile Include="DAO\HoaDon_DAO.vb" />
+    <Compile Include="DAO\KhachHang_DAO.vb" />
+    <Compile Include="DAO\Khuvuc_DAO.vb" />
+    <Compile Include="DAO\KhuyenMai_DAO.vb" />
+    <Compile Include="DAO\NhanVien_DAO.vb" />
+    <Compile Include="DAO\NhaPhanPhoi_DAO.vb" />
+    <Compile Include="DAO\PhieuHang_DAO.vb" />
+    <Compile Include="DAO\SanPhamDaBan_DAO.vb" />
+    <Compile Include="DataProvider.vb" />
+    <Compile Include="DTO\BoPhan_DTO.vb" />
+    <Compile Include="DTO\CuaHang_DTO.vb" />
+    <Compile Include="DTO\Donvitinh_DTO.vb" />
+    <Compile Include="DTO\HoaDon_DTO.vb" />
+    <Compile Include="DTO\KhachHang_DTO.vb" />
+    <Compile Include="DTO\KhuVuc_DTO.vb" />
+    <Compile Include="DTO\KhuyenMai_DTO.vb" />
+    <Compile Include="DTO\LoaiPhieu_DTO.vb" />
+    <Compile Include="DTO\NhanVien_DTO.vb" />
+    <Compile Include="DTO\NhaPhanPhoi_DTO.vb" />
+    <Compile Include="DTO\NhaSanXuat_DTO.vb" />
+    <Compile Include="DTO\PhieuHang_DTO.vb" />
+    <Compile Include="DTO\SanPhamDaBan_DTO.vb" />
+    <Compile Include="DTO\SanPham_DTO.vb" />
+    <Compile Include="GUI\ChangePass.Designer.vb">
+      <DependentUpon>ChangePass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ChangePass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Formphieunhap.Designer.vb">
+      <DependentUpon>Formphieunhap.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Formphieunhap.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SearchInfoForm.Designer.vb">
+      <DependentUpon>SearchInfoForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SearchInfoForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Suachuanhacc.Designer.vb">
+      <DependentUpon>Suachuanhacc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Suachuanhacc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TaonhaCC.Designer.vb">
+      <DependentUpon>TaonhaCC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TaonhaCC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="MyButton.Designer.vb">
+      <DependentUpon>MyButton.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MyButton.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GUI\ChangePass.resx">
+      <DependentUpon>ChangePass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Formphieunhap.resx">
+      <DependentUpon>Formphieunhap.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LoginForm.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SearchInfoForm.resx">
+      <DependentUpon>SearchInfoForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Suachuanhacc.resx">
+      <DependentUpon>Suachuanhacc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TaonhaCC.resx">
+      <DependentUpon>TaonhaCC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyButton.resx">
+      <DependentUpon>MyButton.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chuyển kho.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chứng từ.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hàng hóa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kho hàng.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nhóm hàng.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tồn kho.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Backup_center_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bán hàng.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bộ phận.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cập nhật.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Doanh thu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Đăng ký.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Đọc dữ liệu từ file excel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Đổi pas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Đơn vị tính.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hướng dẫn sử dụng.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lịch sử hàng hóa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Liên hệ.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mua hàng.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NSX.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nhà cung cấp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nhân viên.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nhật ký hệ thống.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phân quyền.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\System Restore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tổng hợp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tỷ giá.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thoát.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thông tin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thu tiền.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trả tiền.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personal-information-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-login-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Khu vực.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Khách hàng.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lưu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
